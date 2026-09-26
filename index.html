@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Library Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📚 Book Library Tracker</h1>
+
+        <!-- Add Book -->
+        <section class="book-form">
+
+            <h2>Add a Book</h2>
+
+            <input
+                type="text"
+                id="bookTitle"
+                placeholder="Book title"
+            >
+
+            <input
+                type="text"
+                id="bookAuthor"
+                placeholder="Author name"
+            >
+
+            <select id="bookStatus">
+                <option value="">Select Status</option>
+                <option value="read">Read</option>
+                <option value="reading">Currently Reading</option>
+                <option value="want-to-read">Want to Read</option>
+            </select>
+
+            <select id="bookRating">
+                <option value="0">Rating (for completed books)</option>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+
+            <button id="addBookBtn">
+                Add Book
+            </button>
+
+        </section>
+
+        <section class="filter-section">
+
+            <h2>My Library</h2>
+
+            <div class="tabs">
+
+                <button
+                    class="tab-btn active"
+                    data-status="all">
+                    All
+                </button>
+
+                <button
+                    class="tab-btn"
+                    data-status="read">
+                    Read
+                </button>
+
+                <button
+                    class="tab-btn"
+                    data-status="reading">
+                    Reading
+                </button>
+
+                <button
+                    class="tab-btn"
+                    data-status="want-to-read">
+                    Want to Read
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="stats-section">
+
+            <h2>Library Statistics</h2>
+
+            <div id="stats">
+                <p>Total Books: <strong>0</strong></p>
+                <p>Books Read: <strong>0</strong></p>
+                <p>Currently Reading: <strong>0</strong></p>
+                <p>Want to Read: <strong>0</strong></p>
+            </div>
+
+        </section>
+
+        <section class="book-list-section">
+
+            <div id="bookList">
+                <p>No books added yet.</p>
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
